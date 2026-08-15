@@ -2,7 +2,14 @@ import React from "react";
 import Logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { CupSoda, House, Phone, UtensilsCrossed } from "lucide-react";
-import { GlassButton, PrimaryButton } from "./Reusable";
+import {
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/clerk-react";
+import { Button } from "./ui/button";
 
 function Header() {
   return (
@@ -34,6 +41,12 @@ function Header() {
               Pricing
             </Link>
             <Link
+              href="#blogs"
+              className="text-white font-md transition-all duration-300 hover:text-cyan-400 cursor-pointer"
+            >
+              Blogs
+            </Link>
+            <Link
               href="#contact"
               className="text-white font-md transition-all duration-300 hover:text-cyan-400 cursor-pointer"
             >
@@ -41,12 +54,21 @@ function Header() {
             </Link>
           </div>
           <div className="flex items-center gap-3 ml-10 md:ml-20">
-            <GlassButton>
-              <span>Login</span>
-            </GlassButton>
-            <PrimaryButton>
-              <span>Sign Up</span>
-            </PrimaryButton>
+            <SignedOut>
+              <SignInButton mode="modal">
+                <Button variant="glass">Login</Button>
+              </SignInButton>
+              <SignUpButton mode="modal">
+                <Button variant="primary">Sign Up</Button>
+              </SignUpButton>
+            </SignedOut>
+            <SignedIn>
+              <UserButton appearance={{
+                elements:{
+                  avatarBox: "w-10 h-10 mr-4 cursor-pointer border-2 border-blue-500/70",
+                }
+              }} />
+            </SignedIn>
           </div>
         </div>
       </header>

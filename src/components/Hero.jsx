@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "./Header";
 import { Badge } from "./ui/badge";
-import { GlassButton, PrimaryButton } from "./Reusable";
 import { Play, Sparkles } from "lucide-react";
+import { Button } from "./ui/button";
 
 function Hero() {
   return (
@@ -38,18 +38,18 @@ function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4 mb-14 sm:mb-16">
-              <PrimaryButton>
+              <Button variant="primary">
                 <span className="flex items-center gap-2">
                   <Sparkles size={17} />
                   Start 6-Week Challenge
                 </span>
-              </PrimaryButton>
-              <GlassButton>
+              </Button>
+              <Button variant="glass">
                 <span className="flex items-center gap-2">
                   <Play size={17} />
                   Watch Success Stories
                 </span>
-              </GlassButton>
+              </Button>
             </div>
 
             <div className="grid grid-cols-3 border-t border-white/10 pt-8 max-w-xs sm:max-w-lg md:max-w-2xl mx-auto">
