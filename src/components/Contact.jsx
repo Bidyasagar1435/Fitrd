@@ -37,9 +37,9 @@ const Contact = () => {
       {/* Divider */}
       <div className="flex items-center justify-center gap-3 mb-12">
         <div className="h-px w-16 bg-gradient-to-r from-transparent to-blue-500/60 rounded-full" />
-        <div className="w-2 h-2 rounded-full bg-blue-500/60" />
+        <div className="w-2 h-2 rounded-full bg-blue-500/60 animate-pulse" />
         <div className="h-px w-24 bg-gradient-to-r from-blue-500/60 to-purple-500/60 rounded-full" />
-        <div className="w-2 h-2 rounded-full bg-purple-500/60" />
+        <div className="w-2 h-2 rounded-full bg-purple-500/60 animate-pulse" />
         <div className="h-px w-16 bg-gradient-to-r from-purple-500/60 to-transparent rounded-full" />
       </div>
 
