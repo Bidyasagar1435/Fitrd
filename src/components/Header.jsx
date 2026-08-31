@@ -41,7 +41,7 @@ function Header() {
               Pricing
             </Link>
             <Link
-              href="#blogs"
+              to="/blogs"
               className="text-white font-md transition-all duration-300 hover:text-cyan-400 cursor-pointer"
             >
               Blogs
